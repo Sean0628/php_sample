@@ -1,8 +1,5 @@
 <?php
-$link = mysqli_connect('127.0.0.1', 'root', '', 'oneline_bbs');
-if (!$link) {
-  die('cannot connetct to DB:' . mysqli_error());
-}
+$link = mysqli_connect('127.0.0.1', 'root', '', 'oneline_bbs'); if (!$link) { die('cannot connetct to DB:' . mysqli_error()); }
 
 $errors = array();
 
@@ -48,4 +45,6 @@ if ($result != false && mysqli_num_rows($result)) {
 }
 mysqli_free_result($result);
 mysqli_close($link);
+
+include 'views/bbs_views.php'
 ?>
